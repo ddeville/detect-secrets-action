@@ -1,3 +1,4 @@
 #!/usr/bin/env sh
 set -e
-detect-secrets scan
+output=$(detect-secrets scan)
+echo "::set-output name=output::$output"
