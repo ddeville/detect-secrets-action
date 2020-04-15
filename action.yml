@@ -7,3 +7,6 @@ runs:
 branding:
   icon: "lock"
   color: "gray-dark"
+outputs:
+  output: # id of output
+    description: 'Scan Result'
