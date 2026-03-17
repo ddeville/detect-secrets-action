@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 set -e
+workspace=${GITHUB_WORKSPACE:-$(pwd)}
+git config --global --add safe.directory "$workspace"
 output=$(detect-secrets scan --exclude-files '.*-lock\.json$')
 {
   printf 'output<<__OUTPUT__\n'
